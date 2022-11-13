@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-export default function Home() {
+export default function News() {
   return (<h1>
-    Home
+    News Page
   </h1>
   )
 }
