@@ -1,5 +1,4 @@
-import Head from "next/head";
-import Image from "next/image";
+// mydomain.com/news/...
 
 export default function Detail() {
   return <h1>Detail Page</h1>;
