@@ -1,9 +1,17 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import Link from "next/link";
+import { Fragment } from "react";
+import RouterBtn from "../component/routerButton";
 
 export default function Home() {
-  return (<h1>
-    Home
-  </h1>
-  )
+  return (
+    <Fragment>
+      <section>
+        <RouterBtn title="SIGNUP" url="/sign/up" />
+        <RouterBtn title="SIGNIN" url="/sign/in" />
+      </section>
+      <section>
+        <RouterBtn title="BOARD" url="/board" />
+      </section>
+    </Fragment>
+  );
 }

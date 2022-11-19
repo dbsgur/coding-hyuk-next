@@ -8,7 +8,7 @@ export default function News() {
     <ul>
       <li><Link href="/news/hyeok" >Coding Hyeok ... </Link></li>
       <li>10심히 코딩중</li>
-      </ul>
+    </ul>
   </Fragment>
   )
 }
