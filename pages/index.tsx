@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Fragment } from "react";
-import RouterBtn from "../component/routerButton";
+import RouterBtn from "../component/RouterBtn";
 
 export default function Home() {
   return (
