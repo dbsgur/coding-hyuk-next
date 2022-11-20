@@ -1,7 +1,6 @@
-import RouterBtn from "../../component/RouterBtn";
+import RouterBtn from "component/RouterBtn";
 import Link from "next/link";
-import { boards, BoardStruct } from "../../data/boardData";
-import { useState, useEffect } from "react";
+import { boards, BoardStruct } from "data/boardData";
 
 function Board() {
   // Error: Hydration failed because the initial UI does not match what was rendered on the server.
