@@ -1,12 +1,8 @@
 import React from "react";
 import Link from "next/link";
+import { NavStruct } from "../data/navData";
 
-interface buttonInfo {
-  url: string;
-  title: string;
-}
-
-function RouterBtn({ url, title }: buttonInfo) {
+function RouterBtn({ url, title }: NavStruct) {
   return <button>{url ? <Link href={url}>{title}</Link> : title}</button>;
 }
 
