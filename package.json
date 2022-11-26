@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "dev:local": "next dev -p 3030",
+    "dev:build": "next build",
+    "dev:start": "next start -p 3030",
+    "staging:build": "cross-env STAGING=1 next build",
+    "staging:start": "cross-env STAGING=1 next start -p 3030",
+    "prod:build": "next build",
+    "prod:start": "next start -p 3030"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -15,9 +19,11 @@
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.8",
+    "cross-env": "^7.0.3",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.3",
     "mongodb": "^4.12.0",
+    "mongoose": "^6.7.3",
     "next": "13.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
