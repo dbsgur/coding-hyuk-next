@@ -24,28 +24,14 @@ async function dbConnect() {
   await connect(process.env.MONGODB_URI!);
   // await connect(process.env.MONGODB_URI || '' );
 
-  const user = new User({
-    name: "Bill",
-    email: "bill@initech.com",
-    avatar: "https://i.imgur.com/dM7Thhn.png",
-  });
-  await user.save();
+  // const user = new User({
+  //   name: "Bill",
+  //   email: "bill@initech.com",
+  //   avatar: "https://i.imgur.com/dM7Thhn.png",
+  // });
+  // await user.save();
 
-  console.log(user.email); // 'bill@initech.com'
+  // console.log(user.email); // 'bill@initech.com'
 }
 
 export default dbConnect;
-// import mongoose from "mongoose";
-
-// const connection = {};
-
-// async function dbConnect() {
-//   if (connection.isConnected) {
-//     return;
-//   }
-
-//   const db = await mongoose.connect(process.env.MONGODB_URI);
-//   connection.isConnected = db.connections[0].readyState;
-// }
-
-// export default dbConnect;
