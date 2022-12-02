@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "lint": "next lint",
-    "dev:local": "next dev -p 3030",
+    "dev:local": "next dev -p 3000",
     "dev:build": "next build",
-    "dev:start": "next start -p 3030",
+    "dev:start": "next start -p 3000",
     "staging:build": "cross-env STAGING=1 next build",
-    "staging:start": "cross-env STAGING=1 next start -p 3030",
+    "staging:start": "cross-env STAGING=1 next start -p 3000",
     "prod:build": "next build",
-    "prod:start": "next start -p 3030"
+    "prod:start": "next start -p 3000"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
