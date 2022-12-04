@@ -12,7 +12,7 @@ function Board() {
           <span>데이터가 없음</span>
         ) : (
           boards.map((board: BoardStruct) => (
-            <li>
+            <li key={board.id}>
               <Link href={`/board/${board.id}_${board.title}_${board.content}`}>
                 {board.title}
               </Link>
