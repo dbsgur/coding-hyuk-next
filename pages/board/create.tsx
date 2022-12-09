@@ -1,6 +1,7 @@
+import dbConnect from "lib/db/dbConnect";
 import React, { useState, useRef } from "react";
 
-function Create() {
+export default function Create() {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const [form, setForm] = useState({
@@ -28,6 +29,7 @@ function Create() {
       title: "",
       content: "",
     });
+
     if (!inputRef.current) {
       return;
     }
@@ -53,4 +55,6 @@ function Create() {
   );
 }
 
-export default Create;
+export async function postBoard() {
+  await dbConnect();
+}
