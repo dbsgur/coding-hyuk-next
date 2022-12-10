@@ -20,8 +20,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/api/example.js"
-    // "lib/schema/Item.ts"
+    "pages/api/example.js",
+    "lib/schema/Item.ts"
   ],
   "exclude": ["node_modules"]
 }
