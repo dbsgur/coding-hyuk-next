@@ -3,10 +3,6 @@ export class NavStruct {
   title?: string;
 }
 
-export const navs: NavStruct[] = [
-  { url: "/sign/in", title: "SIGNUP" },
-  { url: "/sign/up", title: "SIGNIN" },
-  { url: "/board", title: "BOARD" },
-];
+export const navs: NavStruct[] = [{ url: "/board", title: "BOARD" }];
 
 export default { navs, NavStruct };

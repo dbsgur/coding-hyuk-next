@@ -11,6 +11,11 @@ function Navbar() {
       <>
         Signed in as {session?.user?.email} <br />
         <button onClick={() => signOut()}>Sign out</button>
+        <Breadcrumbs maxItems={5} aria-label="breadcrumb">
+          {navs.map((nav) => (
+            <RouterBtn title={nav.title} url={nav.url} key={nav.url} />
+          ))}
+        </Breadcrumbs>
       </>
     );
   }
@@ -20,13 +25,6 @@ function Navbar() {
       <button onClick={() => signIn()}>Sign in</button>
     </>
   );
-  // return (
-  // <Breadcrumbs maxItems={5} aria-label="breadcrumb">
-  //   {navs.map((nav) => (
-  //     <RouterBtn title={nav.title} url={nav.url} key={nav.url} />
-  //   ))}
-  // </Breadcrumbs>
-  // );
 }
 
 export default Navbar;
