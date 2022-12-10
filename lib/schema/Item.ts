@@ -49,6 +49,6 @@ const ItemSchema = new Schema<IItem>({
   },
 });
 
-const Item = model<IItem>("Item", ItemSchema);
+var Item = model<IItem>("Item", ItemSchema);
 
 export default Item;
