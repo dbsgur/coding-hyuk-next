@@ -1,6 +1,18 @@
 import { Schema, model } from "mongoose";
 
-const ItemSchema = new Schema({
+interface IItem {
+  name: string;
+  owner_name: string;
+  species: string;
+  age: number;
+  poddy_trained: boolean;
+  diet?: Array<any>;
+  image_url: string;
+  likes?: Array<any>;
+  dislikes?: Array<any>;
+}
+
+const ItemSchema = new Schema<IItem>({
   name: {
     type: String,
     required: [true, "Please provide a name for this pet."],
@@ -37,4 +49,6 @@ const ItemSchema = new Schema({
   },
 });
 
-export default models.Item || model("item", ItemSchema);
+const Item = model<IItem>("Item", ItemSchema);
+
+export default Item;

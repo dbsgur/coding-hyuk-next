@@ -19,9 +19,18 @@ export default function enviorTest() {
 }
 
 export async function getServerSideProps() {
+  console.log("??2");
+
   await dbConnect();
+  console.log("??3");
   const result = await Item.find({});
+
   const items = result.map((doc: any) => {
+    console.log(`doc : ${doc}`);
+
+    if (doc === null) {
+      console.log(doc);
+    }
     const item = doc.toObject();
     item._id = item._id.toString();
     return item;
